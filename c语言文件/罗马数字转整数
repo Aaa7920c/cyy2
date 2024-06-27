@@ -1,0 +1,29 @@
+//罗马数字转整数
+int zhuanhuan(char c){
+     switch(char c){
+        case 'I';return 1;
+        case 'V';return 5;
+        case 'X';return 10;
+        case 'L';return 50;
+        case 'C';return 100;
+        case 'D';return 500;
+        case 'M';return 1000;
+        default:return 0;
+     }
+}
+int zhengshu(char *s){
+    int result=0;
+    int index=0;
+    while(s[index]='\0'){
+        if(zhuanhuan(s[index]>=zhuanhuan(s[index+1])){
+           result +=zhuanhuan(s[index]);
+        }
+        else{
+            result -=zhuanhuan(s[index]);
+        }
+        index++;
+    }
+    return result;
+}
+//只用检查下一个值是否大于当前值，如果大于就加，如果小于或等于就减
+//罗马数字中最多只会在在大数字左边放一个小数字来表示减；
